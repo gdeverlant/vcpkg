@@ -12,7 +12,7 @@
 
 include(vcpkg_common_functions)
 
-# CPPMicroServices - dev: gdeverlant - branch: port/vcpkg/cppmicroservices
+# CPPMicroServices - dev: gdeverlant - branch: port/5801/cppmicroservices
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO gdeverlant/CppMicroServices
@@ -47,6 +47,7 @@ get_filename_component(FOLDER_NAME "${SOURCE_PATH}" NAME)
 file(COPY ${CURRENT_BUILDTREES_DIR}/src/${FOLDER_NAME}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/cppmicroservices)
 file(RENAME ${CURRENT_PACKAGES_DIR}/share/cppmicroservices/LICENSE ${CURRENT_PACKAGES_DIR}/share/cppmicroservices/copyright)
 
+<<<<<<< HEAD
 
 file(GLOB EXES_RELEASE
     ${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4/usResourceCompiler4.exe
@@ -70,5 +71,7 @@ file(GLOB EXES_DEBUG
 
  #file(REMOVE ${EXES_RELEASE} ${EXES_DEBUG})
 
+=======
+>>>>>>> dev/gdeverlant/port/imgui
 # Post-build test for cmake libraries
 # vcpkg_test_cmake(PACKAGE_NAME cppmicroservices)
