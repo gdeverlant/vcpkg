@@ -47,31 +47,5 @@ get_filename_component(FOLDER_NAME "${SOURCE_PATH}" NAME)
 file(COPY ${CURRENT_BUILDTREES_DIR}/src/${FOLDER_NAME}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/cppmicroservices)
 file(RENAME ${CURRENT_PACKAGES_DIR}/share/cppmicroservices/LICENSE ${CURRENT_PACKAGES_DIR}/share/cppmicroservices/copyright)
 
-<<<<<<< HEAD
-
-file(GLOB EXES_RELEASE
-    ${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4/usResourceCompiler4.exe
-    ${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4/usShell4.exe
-)
-file(GLOB EXES_DEBUG
-    ${CURRENT_PACKAGES_DIR}/debug/tools/cppmicroservices4/usResourceCompiler4.exe
-    ${CURRENT_PACKAGES_DIR}/debug/tools/cppmicroservices4/usShell4.exe
-)
-
-# file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4)
-# file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4/debug)
-
- # Drop a copy of tools
- file(COPY ${EXES_RELEASE} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4)
- file(COPY ${EXES_DEBUG} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4/debug)
-
- # Tools require dlls
-#  vcpkg_copy_tool_dependencies(${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4)
-#  vcpkg_copy_tool_dependencies(${CURRENT_PACKAGES_DIR}/tools/cppmicroservices4/debug)
-
- #file(REMOVE ${EXES_RELEASE} ${EXES_DEBUG})
-
-=======
->>>>>>> dev/gdeverlant/port/imgui
 # Post-build test for cmake libraries
 # vcpkg_test_cmake(PACKAGE_NAME cppmicroservices)
